@@ -1,30 +1,42 @@
-let numerosRomanos = [
-   {romano:'M', numero:1000},
-   {romano:'CM', numero:900},
-   {romano:'D', numero:500},
-   {romano:'CD', numero:400},
-   {romano:'C', numero:100},
-   {romano:'XC', numero:90},
-   {romano:'L', numero:50},
-   {romano:'XL', numero:40},
-   {romano:'X', numero:10},
-   {romano:'IX', numero:9},
-   {romano:'V', numero:5},
-   {romano:'IV', numero:4},
-   {romano:'I', numero:1},
+let ArabicoseRomanos  = [
+   {romano:'M', arabico:1000},
+   {romano:'CM',arabico:900},
+   {romano:'D', arabico:500},
+   {romano:'CD', arabico:400},
+   {romano:'C', arabico:100},
+   {romano:'XC', arabico:90},
+   {romano:'L', arabico:50},
+   {romano:'XL', arabico:40},
+   {romano:'X', arabico:10},
+   {romano:'IX', arabico:9},
+   {romano:'V', arabico:5},
+   {romano:'IV', arabico:4},
+   {romano:'I', arabico:1},
 ];
-const I: number = 1;
-const V: number = 5;
-const X: number = 10;
-const L: number = 50;
-const C: number = 100;
-const D: number = 500;
-const M: number = 1000;
-let btn = document.getElementById('botao');
+
+let btn = document.getElementById('botao') as HTMLElement;
 
 
 
 
-function converter (){
-   let resultado = document.getElementById('algarismo');
+function conversor (numeroArabico:any){
+   //let resultado = document.getElementById('algarismo');
+   let numeroRomano ='';
+
+   for (let i = 0; i < ArabicoseRomanos.length; i++) {
+     
+      if (ArabicoseRomanos[i].arabico <= numeroArabico) {
+         numeroArabico = numeroArabico - ArabicoseRomanos[i].arabico;
+
+         numeroRomano = numeroRomano + ArabicoseRomanos[i].romano ;
+      }
+   }
+   console.log(`${numeroRomano}`);
 }
+
+btn.addEventListener('click',function converor(){
+   
+});
+conversor(10);
+
+//Parou em 10 min
