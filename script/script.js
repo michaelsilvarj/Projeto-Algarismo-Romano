@@ -16,7 +16,6 @@ let ArabicoseRomanos = [
 let btn = document.querySelector('.botao');
 
 
-
 function conversor(numeroArabico) {
     
     let numeroRomano = '';
@@ -37,9 +36,25 @@ function conversor(numeroArabico) {
     let num = document.getElementById('InputRomano').value = numeroRomano;
     console.log(`O numero ${arabico} corresponde a em Romano ${numeroRomano}`);
 } 
+
+
 btn.addEventListener('click', function(){
+
     let num = document.getElementById('InputNumero').value;
-    conversor(num);
+
+    if(num >= 1 && num <=3000){
+        conversor(num);
+
+    } else  if(num == 0){
+        alert('Não há algarismo romano com o númeoro informado');
+        console.log('Não há algarismo romano com o númeoro informado');
+       
+
+    } if(num >=3001 || num <= -1){
+        alert('OPS!! Valores não permitido');
+        console.log('OPS!! Tente Novamente !');
+    }
+   
 
 });
 
