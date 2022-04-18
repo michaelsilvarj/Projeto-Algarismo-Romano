@@ -13,10 +13,12 @@ let ArabicoseRomanos = [
     { romano: 'IV', arabico: 4 },
     { romano: 'I', arabico: 1 },
 ];
-//var btn = document.getElementById('botao');
+let btn = document.querySelector('.botao');
+
+
 
 function conversor(numeroArabico) {
-    //let resultado = document.getElementById('algarismo');
+    
     let numeroRomano = '';
     let arabico = numeroArabico;
 
@@ -32,10 +34,12 @@ function conversor(numeroArabico) {
             i--;
         }
     }
+    let num = document.getElementById('InputRomano').value = numeroRomano;
     console.log(`O numero ${arabico} corresponde a em Romano ${numeroRomano}`);
-}
-//btn.addEventListener('click', function converor() {});
+} 
+btn.addEventListener('click', function(){
+    let num = document.getElementById('InputNumero').value;
+    conversor(num);
 
-conversor(666);
-//Parou em 10 min
-// Parou em 15.28
+});
+

@@ -1,4 +1,8 @@
 
+
+body{
+    
+}
 .container{
     display: flex;
     justify-content: center;
@@ -23,6 +27,6 @@
 }
 
 input{
-    width: 100px;
+    width: 120px;
     border-radius:10px;
 }
