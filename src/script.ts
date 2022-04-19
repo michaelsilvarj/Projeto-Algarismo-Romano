@@ -13,10 +13,11 @@ let ArabicoseRomanos = [
    { romano: 'IV', arabico: 4 },
    { romano: 'I', arabico: 1 },
 ];
-//var btn = document.getElementById('botao');
 
-function conversor(numeroArabico:any) {
-   //let resultado = document.getElementById('algarismo');
+let btn = document.querySelector('.botao');
+
+function conversor(numeroArabico) {
+   
    let numeroRomano = '';
    let arabico = numeroArabico;
 
@@ -32,8 +33,31 @@ function conversor(numeroArabico:any) {
            i--;
        }
    }
-   console.log(`O numero ${arabico} corresponde a em Romano ${numeroRomano}`);
-}
-//btn.addEventListener('click', function converor() {});
 
-conversor(666);
+   // Joga no input o valor em algarismo romano
+  let num2 : string = (<HTMLSelectElement>document.getElementById('InputRomano')).value = `  ${numeroRomano}`;
+   console.log(`O numero ${arabico} corresponde a em Romano ${numeroRomano}`);
+} 
+
+btn.addEventListener('click', function(){
+    
+    //Tipo any por retornar um void
+   let num : any = (<HTMLSelectElement>document.getElementById('InputNumero')).value ;
+   
+    if(num >= 1 && num <=3999){
+       conversor(num);
+
+   } else  if(num == 0){
+       alert('Não há algarismo romano com o númeoro informado');
+       console.log('Não há algarismo romano com o númeoro informado');
+      
+
+   } else if(num >=4000 || num <= -1){
+       alert('OPS!! Valores não permitido');
+       console.log('OPS!! Tente Novamente !');
+
+   } else  if(num == undefined){
+    alert('VALOR NÃO DIGITADO');
+    console.log('VALOR NÃO DIGITADO !');
+   }
+ });

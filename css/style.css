@@ -1,22 +1,31 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 body{
-    
+    font-family: 'Roboto', sans-serif;
+    background-image: linear-gradient( 4.5rad, #BFBFBF , #595959, #262626, #0D0D0D );
 }
+
+
 .container{
     display: flex;
     justify-content: center;
-    align-items: center;
-    background-image: linear-gradient( 4.5rad, #BFBFBF , #595959, #262626, #0D0D0D );
+    align-items: center;    
     height: 100vh;
+    width: 100vw;
+    
+
 }
+
+
 .card{
-    border: 1px solid red;
+    /*border: 1px solid red;*/
     display:flex;
     background-color:#F2F2F2;
-    width: 400px;
+    width: 630px;
     height: 300px;
     border-radius: 40px;
+    text-align: center;
+    box-shadow: 0 0 12px #191526;
         
     
 }
@@ -24,9 +33,34 @@ body{
 .conteudo{
     margin-left: auto;
     margin-right: auto; 
+    padding-top:30px;
 }
 
 input{
-    width: 120px;
-    border-radius:10px;
+    width: 180px;
+    border-radius:5px;
+    font-weight: bold;
+    margin-top: 30px;
+
+
+}
+
+input:focus{    
+    box-shadow: 0 0 0 0;
+    outline: 0;
+     }
+
+
+
+#InputRomano{
+    color: red;
+}
+
+.btn{
+  margin-top: 10px;
+}
+
+span{
+    padding-bottom: 8px;
+    align-items: center;
 }
